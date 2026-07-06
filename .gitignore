@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+
+# Local environment
+.env
+.env.*
+!.env.example
+*.log
+
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.svelte-kit/
+.astro/
+coverage/
