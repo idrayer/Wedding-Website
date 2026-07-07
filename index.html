@@ -41,11 +41,7 @@
 
       <div class="content">
         <section class="panel" id="our-story">
-          <div class="panel__media">
-            <button class="zoom-trigger" type="button" data-zoomable>
-              <img class="section-image random-section-image" data-image-slot="our-story" alt="Our story image" loading="lazy" />
-            </button>
-          </div>
+          <div class="panel__media photo-gallery" data-gallery aria-label="Our story photo gallery"></div>
           <div class="panel__body">
             <p class="section-label">Our Story</p>
             <h2>How We Got Here</h2>
@@ -68,11 +64,7 @@
         </section>
 
         <section class="panel" id="event-logistics">
-          <div class="panel__media">
-            <button class="zoom-trigger" type="button" data-zoomable>
-              <img class="section-image random-section-image" data-image-slot="event-logistics" alt="Event logistics image" loading="lazy" />
-            </button>
-          </div>
+          <div class="panel__media photo-gallery" data-gallery aria-label="Event logistics photo gallery"></div>
           <div class="panel__body">
             <p class="section-label">Event Logistics</p>
             <h2>When & Where</h2>
@@ -105,11 +97,7 @@
         </section>
 
         <section class="panel" id="where-to-stay">
-          <div class="panel__media">
-            <button class="zoom-trigger" type="button" data-zoomable>
-              <img class="section-image random-section-image" data-image-slot="where-to-stay" alt="Where to stay image" loading="lazy" />
-            </button>
-          </div>
+          <div class="panel__media photo-gallery" data-gallery aria-label="Where to stay photo gallery"></div>
           <div class="panel__body">
             <p class="section-label">Where to Stay</p>
             <h2>Nearby Accommodations</h2>
@@ -132,11 +120,7 @@
         </section>
 
         <section class="panel panel--activities" id="things-to-do">
-          <div class="panel__media">
-            <button class="zoom-trigger" type="button" data-zoomable>
-              <img class="section-image random-section-image" data-image-slot="things-to-do" alt="Things to do image" loading="lazy" />
-            </button>
-          </div>
+          <div class="panel__media photo-gallery" data-gallery aria-label="Things to do photo gallery"></div>
           <div class="panel__body">
             <p class="section-label">Things to Do</p>
             <h2>Wimberley & Hill Country Favorites</h2>
@@ -185,11 +169,7 @@
         </section>
 
         <section class="panel panel--links" id="important-links">
-          <div class="panel__media">
-            <button class="zoom-trigger" type="button" data-zoomable>
-              <img class="section-image random-section-image" data-image-slot="important-links" alt="Important links image" loading="lazy" />
-            </button>
-          </div>
+          <div class="panel__media photo-gallery" data-gallery aria-label="Important links photo gallery"></div>
           <div class="panel__body">
             <p class="section-label">Important Links</p>
             <h2>RSVPs and Registry</h2>
@@ -210,7 +190,16 @@
     <button class="lightbox__backdrop" type="button" aria-label="Close image preview"></button>
     <figure class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Image preview">
       <button class="lightbox__close" type="button" aria-label="Close image preview">×</button>
-      <img class="lightbox__image" alt="" />
+      <div class="lightbox__toolbar" aria-label="Image zoom controls">
+        <button class="lightbox__control" type="button" data-zoom-out aria-label="Zoom out">−</button>
+        <button class="lightbox__control" type="button" data-zoom-reset aria-label="Reset zoom">Reset</button>
+        <button class="lightbox__control" type="button" data-zoom-in aria-label="Zoom in">+</button>
+      </div>
+      <div class="lightbox__viewport">
+        <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Show previous photo" hidden>‹</button>
+        <img class="lightbox__image" alt="" draggable="false" />
+        <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Show next photo" hidden>›</button>
+      </div>
     </figure>
   </div>
 
